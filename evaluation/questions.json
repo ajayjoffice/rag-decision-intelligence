@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What type of medical insurance is provided to employees?",
+    "category": "answerable",
+    "expected_documents": ["benefits-and-perks.md"]
+  },
+  {
+    "id": 2,
+    "question": "What percentage of the medical insurance premium does the company pay?",
+    "category": "answerable",
+    "expected_documents": ["benefits-and-perks.md"]
+  },
+  {
+    "id": 3,
+    "question": "What vision insurance benefits do employees receive?",
+    "category": "answerable",
+    "expected_documents": ["benefits-and-perks.md"]
+  },
+  {
+    "id": 4,
+    "question": "Do employees receive personal 37signals accounts?",
+    "category": "answerable",
+    "expected_documents": ["benefits-and-perks.md"]
+  },
+  {
+    "id": 5,
+    "question": "Can employees work on outside projects?",
+    "category": "answerable",
+    "expected_documents": ["moonlighting.md"]
+  },
+  {
+    "id": 6,
+    "question": "Are occasional paid side gigs allowed?",
+    "category": "answerable",
+    "expected_documents": ["moonlighting.md"]
+  },
+  {
+    "id": 7,
+    "question": "What does the company say about employee career growth?",
+    "category": "answerable",
+    "expected_documents": ["making-a-career.md"]
+  },
+  {
+    "id": 8,
+    "question": "How are employee promotions handled?",
+    "category": "answerable",
+    "expected_documents": ["making-a-career.md"]
+  },
+  {
+    "id": 9,
+    "question": "What is the company's approach to working independently?",
+    "category": "answerable",
+    "expected_documents": ["how-we-work.md"]
+  },
+  {
+    "id": 10,
+    "question": "What are the company's expectations around work devices?",
+    "category": "answerable",
+    "expected_documents": ["managing-work-devices.md"]
+  },
+  {
+    "id": 11,
+    "question": "What is the company's annual revenue?",
+    "category": "unanswerable",
+    "expected_documents": []
+  },
+  {
+    "id": 12,
+    "question": "How many customers does the company currently have?",
+    "category": "unanswerable",
+    "expected_documents": []
+  },
+  {
+    "id": 13,
+    "question": "What is the CEO's annual salary?",
+    "category": "unanswerable",
+    "expected_documents": []
+  },
+  {
+    "id": 14,
+    "question": "Can employees use company devices for personal activities?",
+    "category": "ambiguous",
+    "expected_documents": []
+  },
+  {
+    "id": 15,
+    "question": "Does the company provide unlimited paid vacation?",
+    "category": "unanswerable",
+    "expected_documents": []
+  },
+  {
+    "id": 16,
+    "question": "What programming languages are required for employees?",
+    "category": "unanswerable",
+    "expected_documents": []
+  },
+  {
+    "id": 17,
+    "question": "What benefits are available to employees?",
+    "category": "multi_source",
+    "expected_documents": ["benefits-and-perks.md"]
+  },
+  {
+    "id": 18,
+    "question": "What types of leave are discussed in the company documents?",
+    "category": "multi_source",
+    "expected_documents": ["stateFMLA.md"]
+  },
+  {
+    "id": 19,
+    "question": "What are the expectations for employees who manage their own work?",
+    "category": "answerable",
+    "expected_documents": ["how-we-work.md"]
+  },
+  {
+    "id": 20,
+    "question": "What happens when an employee leaves the company?",
+    "category": "answerable",
+    "expected_documents": ["severance.md"]
+  }
+]

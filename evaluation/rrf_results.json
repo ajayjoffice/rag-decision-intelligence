@@ -1,0 +1,570 @@
+[
+  {
+    "id": 1,
+    "question": "What type of medical insurance is provided to employees?",
+    "category": "answerable",
+    "expected_documents": [
+      "benefits-and-perks.md"
+    ],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "stateFMLA.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Medical Insurance",
+      "Health Insurance for Staff Outside the US",
+      "Health Insurance",
+      "State Medical and Family Leave Provisions",
+      "Dental Insurance"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.016221575885774723,
+    "max_reranker_score": 0.9764088988304138,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to SOURCE 1, Document: benefits-and-perks.md, Section: Medical Insurance, Blue Cross Blue Shield PPO provides medical insurance to employees in the United States. The company pays 75% of the premium, and the employee pays the other 25%.",
+    "latency_seconds": 1.966
+  },
+  {
+    "id": 2,
+    "question": "What percentage of the medical insurance premium does the company pay?",
+    "category": "answerable",
+    "expected_documents": [
+      "benefits-and-perks.md"
+    ],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Medical Insurance",
+      "Health Insurance for Staff Outside the US",
+      "Life Insurance",
+      "Dental Insurance",
+      "Vision Insurance"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.016221575885774723,
+    "max_reranker_score": 0.9979458451271057,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to SOURCE 1, Document: benefits-and-perks.md, Section: Medical Insurance, the company pays 75% of the medical insurance premium, and the employee pays the other 25%.",
+    "latency_seconds": 1.552
+  },
+  {
+    "id": 3,
+    "question": "What vision insurance benefits do employees receive?",
+    "category": "answerable",
+    "expected_documents": [
+      "benefits-and-perks.md"
+    ],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Vision Insurance",
+      "Health Insurance for Staff Outside the US",
+      "Medical Insurance",
+      "Dental Insurance",
+      "Health Insurance"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.01639344262295082,
+    "max_reranker_score": 0.8825271129608154,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to SOURCE 1, Document: benefits-and-perks.md, Section: Vision Insurance, employees receive 100% of the premium for vision insurance through MetLife, with open enrollment in November and new coverage beginning December 1. Marriages and domestic partnerships are covered equally.",
+    "latency_seconds": 2.284
+  },
+  {
+    "id": 4,
+    "question": "Do employees receive personal 37signals accounts?",
+    "category": "answerable",
+    "expected_documents": [
+      "benefits-and-perks.md"
+    ],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Paid Time Off",
+      "Employee Liquidity Pool",
+      "Retirement Plan",
+      "Employee Profit Sharing",
+      "Personal 37signals Accounts"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.01586848635235732,
+    "max_reranker_score": 0.9424532651901245,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to SOURCE 5, Document: benefits-and-perks.md, Section: Personal 37signals Accounts, all employees can have a free personal Basecamp account and a free personal HEY account.",
+    "latency_seconds": 2.438
+  },
+  {
+    "id": 5,
+    "question": "Can employees work on outside projects?",
+    "category": "answerable",
+    "expected_documents": [
+      "moonlighting.md"
+    ],
+    "retrieved_documents": [
+      "moonlighting.md",
+      "moonlighting.md",
+      "moonlighting.md",
+      "moonlighting.md",
+      "titles-for-designers.md"
+    ],
+    "retrieved_sections": [
+      "A Note About Moonlighting",
+      "Not OK",
+      "In general",
+      "OK",
+      "Titles for Designers"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.01639344262295082,
+    "max_reranker_score": 0.5417119860649109,
+    "correction_used": true,
+    "rewritten_query": "allowed outside projects",
+    "answer": "According to SOURCE 1, Document: moonlighting.md, Section: A Note About Moonlighting, moonlighting means working other professional, paid jobs outside of your work at 37signals. The document provides examples of what is considered OK and what is not OK.\n\nSOURCE 4, Document: moonlighting.md, Section: OK, lists several examples of what is considered OK, including:\n\n* An occasional side gig, free or paid, for someone you know.\n* An occasional speaking gig, free or paid.\n* A side business that's different from your day job, as long as the commitment is only a few hours a week.\n* Serve as an advisor for another company, or be on a board, as long as there's no conflict of interest.\n* Do volunteer or occasional pro-bono work for a cause you're actively involved with.\n\nThese examples suggest that employees can work on outside projects, but with certain conditions and limitations.",
+    "latency_seconds": 7.141
+  },
+  {
+    "id": 6,
+    "question": "Are occasional paid side gigs allowed?",
+    "category": "answerable",
+    "expected_documents": [
+      "moonlighting.md"
+    ],
+    "retrieved_documents": [
+      "moonlighting.md",
+      "moonlighting.md",
+      "moonlighting.md",
+      "moonlighting.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "OK",
+      "Not OK",
+      "A Note About Moonlighting",
+      "In general",
+      "Coworking Space Stipend"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.01639344262295082,
+    "max_reranker_score": 0.9937953948974609,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to SOURCE 1, Document: moonlighting.md, Section: OK, \"An occasional side gig, free or paid, for someone you know.\" This implies that occasional paid side gigs are allowed, as long as they are for someone you know.",
+    "latency_seconds": 2.923
+  },
+  {
+    "id": 7,
+    "question": "What does the company say about employee career growth?",
+    "category": "answerable",
+    "expected_documents": [
+      "making-a-career.md"
+    ],
+    "retrieved_documents": [
+      "titles-for-support.md",
+      "titles-for-designers.md",
+      "making-a-career.md",
+      "titles-for-ops.md",
+      "titles-for-support.md"
+    ],
+    "retrieved_sections": [
+      "Titles for Customer Support",
+      "Titles for Designers",
+      "Mastery & Titles",
+      "Titles for Ops",
+      "Titles for Customer Support"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.0153224043715847,
+    "max_reranker_score": 0.05860195308923721,
+    "correction_used": true,
+    "rewritten_query": "allowed career development opportunities",
+    "answer": "According to the provided documents, the company has a career growth structure with five levels: Junior (L1), Mid-level (L2), Senior (L3), Lead (L4), and Principal (L5). The company expects employees to level up within a certain timeframe, with specific timeframes for each level. For example, Juniors should achieve Senior in 4 years, and Mid-level contributors should achieve Senior in 2 years. The company also states that once an employee reaches Senior, there is no expectation of further progression to Lead or Principal, except in rare cases where the employee's innovative work creates a significant impact across the organization and industry.",
+    "latency_seconds": 6.656
+  },
+  {
+    "id": 8,
+    "question": "How are employee promotions handled?",
+    "category": "answerable",
+    "expected_documents": [
+      "making-a-career.md"
+    ],
+    "retrieved_documents": [
+      "titles-for-support.md",
+      "how-we-work.md",
+      "making-a-career.md",
+      "making-a-career.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Titles for Customer Support Leadership",
+      "Cooperatively",
+      "Pay & Promotions",
+      "Your First Year",
+      "Employee Profit Sharing"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.016300898995240613,
+    "max_reranker_score": 0.005880736745893955,
+    "correction_used": true,
+    "rewritten_query": "What are the procedures for employee advancement and career progression?",
+    "answer": "According to the document \"making-a-career.md\", Section: Pay & Promotions, when an employee gets a promotion, they will receive a corresponding pay raise effective on their next pay cycle.",
+    "latency_seconds": 4.671
+  },
+  {
+    "id": 9,
+    "question": "What is the company's approach to working independently?",
+    "category": "answerable",
+    "expected_documents": [
+      "how-we-work.md"
+    ],
+    "retrieved_documents": [
+      "how-we-work.md",
+      "how-we-work.md",
+      "how-we-work.md",
+      "how-we-work.md",
+      "moonlighting.md"
+    ],
+    "retrieved_sections": [
+      "Cooperatively",
+      "Balanced",
+      "With managers of one",
+      "Remotely",
+      "OK"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.016129032258064516,
+    "max_reranker_score": 0.007783614099025726,
+    "correction_used": true,
+    "rewritten_query": "allowed independent work",
+    "answer": "According to the provided documents, the company's approach to working independently is outlined in Section \"With managers of one\" of the document \"how-we-work.md\". It states that everyone at 37signals is expected to do a lot of self-management, setting their own direction and determining what needs to be done, without waiting for someone to tell them to. This is referred to as being a \"manager of one\".",
+    "latency_seconds": 4.709
+  },
+  {
+    "id": 10,
+    "question": "What are the company's expectations around work devices?",
+    "category": "answerable",
+    "expected_documents": [
+      "managing-work-devices.md"
+    ],
+    "retrieved_documents": [
+      "managing-work-devices.md",
+      "managing-work-devices.md",
+      "managing-work-devices.md",
+      "managing-work-devices.md",
+      "making-a-career.md"
+    ],
+    "retrieved_sections": [
+      "Mobile devices and Windows",
+      "Access to code and secrets",
+      "Managing work devices",
+      "FAQ",
+      "Your First Year"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.016129032258064516,
+    "max_reranker_score": 0.07994954288005829,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to the provided documents, the company's expectations around work devices are as follows:\n\n* All devices running Android, iOS/iPadOS, and Windows are considered \"untrusted\" and should not be used to store 37signals code or secrets.\n* Devices should be used only for accessing work projects and email, and not for coding or accessing secure systems.\n* Devices should be used to access sensitive systems like Queenbee, internal VPN, and remote servers.\n* Employees should maintain a separate, personally-owned machine if they need a home computer.\n* The company reserves the right to seize devices or their data in response to subpoenas, lawsuits, or security incidents.\n\nThese expectations are outlined in the \"Managing work devices\" section of the document, as well as the \"Access to code and secrets\" and \"FAQ\" sections.",
+    "latency_seconds": 5.083
+  },
+  {
+    "id": 11,
+    "question": "What is the company's annual revenue?",
+    "category": "unanswerable",
+    "expected_documents": [],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "how-we-work.md",
+      "benefits-and-perks.md",
+      "moonlighting.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Employee Profit Sharing",
+      "Cooperatively",
+      "Sabbatical",
+      "Not OK",
+      "Employee Liquidity Pool"
+    ],
+    "retrieved_expected_document": false,
+    "max_final_score": 0.01621129326047359,
+    "max_reranker_score": 0.0068352557718753815,
+    "correction_used": true,
+    "rewritten_query": "allowed annual revenue",
+    "answer": "The information on the company's annual revenue is not found in the provided documents.",
+    "latency_seconds": 3.629
+  },
+  {
+    "id": 12,
+    "question": "How many customers does the company currently have?",
+    "category": "unanswerable",
+    "expected_documents": [],
+    "retrieved_documents": [
+      "titles-for-support.md",
+      "our-internal-systems.md",
+      "titles-for-support.md",
+      "our-rituals.md",
+      "titles-for-support.md"
+    ],
+    "retrieved_sections": [
+      "Titles for Customer Support",
+      "Queenbee",
+      "Titles for Customer Support Leadership",
+      "Everyone on Support (EOS)",
+      "Titles for Customer Support"
+    ],
+    "retrieved_expected_document": false,
+    "max_final_score": 0.016300898995240613,
+    "max_reranker_score": 0.0017203898169100285,
+    "correction_used": true,
+    "rewritten_query": "customer count",
+    "answer": "The information on the number of customers the company currently has is not found in the provided documents.",
+    "latency_seconds": 4.104
+  },
+  {
+    "id": 13,
+    "question": "What is the CEO's annual salary?",
+    "category": "unanswerable",
+    "expected_documents": [],
+    "retrieved_documents": [
+      "making-a-career.md",
+      "how-we-work.md",
+      "making-a-career.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Pay & Promotions",
+      "Cooperatively",
+      "Mastery & Titles",
+      "Employee Profit Sharing",
+      "Employee Liquidity Pool"
+    ],
+    "retrieved_expected_document": false,
+    "max_final_score": 0.01621129326047359,
+    "max_reranker_score": 0.02213277854025364,
+    "correction_used": true,
+    "rewritten_query": "allowed salary of CEO",
+    "answer": "The provided context does not mention the CEO's annual salary. The information about salaries is only mentioned in the context of industry standards and the company's pay floor, but it does not specify the CEO's salary.",
+    "latency_seconds": 4.606
+  },
+  {
+    "id": 14,
+    "question": "Can employees use company devices for personal activities?",
+    "category": "ambiguous",
+    "expected_documents": [],
+    "retrieved_documents": [
+      "managing-work-devices.md",
+      "benefits-and-perks.md",
+      "how-we-work.md",
+      "benefits-and-perks.md",
+      "moonlighting.md"
+    ],
+    "retrieved_sections": [
+      "Access to code and secrets",
+      "Personal 37signals Accounts",
+      "Cooperatively",
+      "Coworking Space Stipend",
+      "OK"
+    ],
+    "retrieved_expected_document": false,
+    "max_final_score": 0.016300898995240613,
+    "max_reranker_score": 0.0472848005592823,
+    "correction_used": true,
+    "rewritten_query": "allowed personal use",
+    "answer": "According to the document \"managing-work-devices.md\" in the section \"Access to code and secrets\", employees are not allowed to keep any personal data on their 37signals-issued computer. This implies that employees should not use company devices for personal activities.",
+    "latency_seconds": 3.851
+  },
+  {
+    "id": 15,
+    "question": "Does the company provide unlimited paid vacation?",
+    "category": "unanswerable",
+    "expected_documents": [],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "moonlighting.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Paid Time Off",
+      "OK",
+      "Sabbatical",
+      "Summer Hours",
+      "Coworking Space Stipend"
+    ],
+    "retrieved_expected_document": false,
+    "max_final_score": 0.01639344262295082,
+    "max_reranker_score": 0.025129422545433044,
+    "correction_used": true,
+    "rewritten_query": "unlimited paid vacation",
+    "answer": "No, the company does not provide unlimited paid vacation. According to the benefits-and-perks.md document, employees are offered 20 days of vacation and personal days, plus 11 local holidays every year, with a maximum bank of 27 days at any time.",
+    "latency_seconds": 3.159
+  },
+  {
+    "id": 16,
+    "question": "What programming languages are required for employees?",
+    "category": "unanswerable",
+    "expected_documents": [],
+    "retrieved_documents": [
+      "titles-for-programmers.md",
+      "titles-for-programmers.md",
+      "titles-for-programmers.md",
+      "titles-for-programmers.md",
+      "titles-for-programmers.md"
+    ],
+    "retrieved_sections": [
+      "Programming Management",
+      "Individual Contributor Expectations",
+      "Individual Contributor Expectations",
+      "Individual Contributor Expectations",
+      "Individual Contributor Expectations"
+    ],
+    "retrieved_expected_document": false,
+    "max_final_score": 0.015296528447444552,
+    "max_reranker_score": 0.0608365423977375,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to SOURCE 4, Document: titles-for-programmers.md, Section: Individual Contributor Expectations, the required programming languages are not explicitly listed. However, the document does mention that a Lead Programmer (L4) and Principal Programmer (L5) are expected to \"invent new concepts, create new systems, pushes the whole organization or industry forward regularly.\" This implies that they may be expected to work with a variety of programming languages, but it is not specified which ones.",
+    "latency_seconds": 4.889
+  },
+  {
+    "id": 17,
+    "question": "What benefits are available to employees?",
+    "category": "multi_source",
+    "expected_documents": [
+      "benefits-and-perks.md"
+    ],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "stateFMLA.md",
+      "stateFMLA.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Health Insurance",
+      "Health Insurance for Staff Outside the US",
+      "New Jersey Medical and Family Leave",
+      "State Medical and Family Leave Provisions",
+      "Computer Policy"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.01564516129032258,
+    "max_reranker_score": 0.12449880689382553,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to the provided documents, the benefits available to employees include:\n\n* Health insurance (with 75% reimbursement for out-of-pocket payments for employees outside the US)\n* Temporary Disability Insurance for managing physical or mental health conditions\n* Maternity Coverage\n* Family Leave Insurance for caring for a loved one, bonding with a new child, or coping with domestic violence\n* Paid Medical and Family Leave provisions in certain states (with more detailed explanations in Basecamp)\n\nNote: The Computer Policy mentions ordering a new computer for new hires, but it does not explicitly state it as a benefit.",
+    "latency_seconds": 3.126
+  },
+  {
+    "id": 18,
+    "question": "What types of leave are discussed in the company documents?",
+    "category": "multi_source",
+    "expected_documents": [
+      "stateFMLA.md"
+    ],
+    "retrieved_documents": [
+      "benefits-and-perks.md",
+      "stateFMLA.md",
+      "titles-for-support.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Bereavement Leave",
+      "State Medical and Family Leave Provisions",
+      "Titles for Customer Support Leadership",
+      "Scheduling Time Off",
+      "Paid Sick Time"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.015147058823529413,
+    "max_reranker_score": 0.180495023727417,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to the provided documents, the following types of leave are discussed:\n\n1. Bereavement Leave: paid time off for making arrangements, settling family affairs, and attending the funeral or memorial service after the death of an immediate or extended family member.\n2. Paid Sick Time: paid time off for illness or injury, with a limit of 7 consecutive work days.",
+    "latency_seconds": 3.433
+  },
+  {
+    "id": 19,
+    "question": "What are the expectations for employees who manage their own work?",
+    "category": "answerable",
+    "expected_documents": [
+      "how-we-work.md"
+    ],
+    "retrieved_documents": [
+      "how-we-work.md",
+      "titles-for-programmers.md",
+      "titles-for-ops.md",
+      "titles-for-support.md",
+      "titles-for-ops.md"
+    ],
+    "retrieved_sections": [
+      "With managers of one",
+      "Individual Contributor Expectations",
+      "Titles for Ops",
+      "Titles for Customer Support",
+      "Titles for Ops"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.015958768007948335,
+    "max_reranker_score": 0.30545634031295776,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to SOURCE 1: Document: how-we-work.md, Section: With managers of one, a manager of one is expected to \"spend their time well when left to their own devices\" and \"determine what needs to be done, and do it, without waiting for someone to tell you to\". This implies that employees who manage their own work are expected to be self-directed, proactive, and responsible for their own time management and task prioritization.",
+    "latency_seconds": 4.972
+  },
+  {
+    "id": 20,
+    "question": "What happens when an employee leaves the company?",
+    "category": "answerable",
+    "expected_documents": [
+      "severance.md"
+    ],
+    "retrieved_documents": [
+      "how-we-work.md",
+      "benefits-and-perks.md",
+      "benefits-and-perks.md",
+      "severance.md",
+      "benefits-and-perks.md"
+    ],
+    "retrieved_sections": [
+      "Remotely",
+      "Employee Profit Sharing",
+      "Employee Liquidity Pool",
+      "Severance Packages",
+      "Sabbatical"
+    ],
+    "retrieved_expected_document": true,
+    "max_final_score": 0.014080234833659491,
+    "max_reranker_score": 0.23684798181056976,
+    "correction_used": false,
+    "rewritten_query": null,
+    "answer": "According to the provided documents, when an employee leaves the company, they may be eligible for a severance package, which includes:\n\n* A lump sum payment equivalent to 4 weeks pay if they've been with the company for less than 1 year\n* An additional 2 weeks pay for every year of employment, with a maximum of 4 months of severance pay if they've been with the company for over 1 year\n* Health insurance for them and their dependents if they've been on the company's policies for the same time periods\n* Compensation for unused vacation time and sabbatical time (if applicable)\n* Compensation for unused PTO calculated using their hourly rate\n\nAdditionally, if an employee has shares in the profit sharing program or the liquidity pool, they may forfeit those shares if they resign or are terminated before the distribution date.\n\nSource: Document: severance.md, Section: Severance Packages",
+    "latency_seconds": 5.954
+  }
+]
