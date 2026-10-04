@@ -7,3 +7,4 @@ tqdm
 streamlit
 llama-cpp-python
 accelerate
+rank-bm25
