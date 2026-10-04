@@ -27,9 +27,7 @@ For example, a user might ask about “outside projects” while a source docume
 
 The repository includes 15 Markdown source documents, 95 processed chunks, a prebuilt FAISS index and metadata, an evaluation set of 20 questions, and saved baseline and hybrid evaluation results. The index and processed files are committed; the local GGUF model is excluded by `.gitignore` and must be supplied separately.
 
-> **Screenshot placeholder:** Replace this block with a screenshot of the Streamlit question, answer, and retrieved source display.
->
-> `![Application screenshot](docs/images/app-screenshot.png)`
+![RAG Decision Intelligence application](docs/images/app-screenshot.png)
 
 ## 2. Key features
 
@@ -126,6 +124,8 @@ streamlit run ui/app.py
 
 Enter a question and choose **Ask Question**. The page displays the generated response and retrieval information. Expand a source entry to inspect the document, section, scores when present, and passage text.
 
+![Application interface](docs/images/app-screenshot.png)
+
 ### Run a retrieval and answer evaluation
 
 ```bash
@@ -160,9 +160,9 @@ Answerable examples represented in the evaluation set include:
 
 The question “What is the company's annual revenue?” is included as an unsupported example. The generator prompt instructs the model to say when the supplied context does not contain enough information. This is a prompt-level behavior, not a formal guarantee that the model will always abstain correctly.
 
-> **Screenshot placeholder:** Insert a screenshot here showing a question that triggers corrective retrieval and the displayed supporting source.
->
-> `![Corrective retrieval example](docs/images/corrective-retrieval.png)`
+![Generated answer with supporting sources](docs/images/answer-and-sources.png)
+
+![Unsupported question example](docs/images/unsupported-question.png)
 
 ## 6. Project structure
 
@@ -197,6 +197,10 @@ rag-decision-intelligence/
 └── requirements.txt              # Unpinned Python dependencies
 ```
 
+![Repository corpus and generated index files](docs/images/corpus-and-index-1.png)
+
+![Repository artifacts](docs/images/corpus-and-index-2.png)
+
 The active pipeline imports `Retriever` from `rag/retriever.py`. `rag/retriever_score_fusion.py` is present in the repository but is not imported by `rag/pipeline.py`.
 
 ## 7. Architecture and workflows
@@ -212,9 +216,25 @@ The active pipeline imports `Retriever` from `rag/retriever.py`. `rag/retriever_
 7. **Generator (`rag/generator.py`)** uses the local GGUF model for both query rewriting and answer generation. Generation receives the user's original question and selected source chunks.
 8. **UI (`ui/app.py`)** caches a single pipeline instance with Streamlit's resource cache and renders answer, correction status, sources, and evidence details.
 
-> **Architecture diagram placeholder:** Add a diagram of the implemented components and artifact paths here.
->
-> `![Architecture diagram](docs/images/architecture.png)`
+```mermaid
+flowchart TD
+    A[Markdown documents] --> B[Loader and section-aware chunker]
+    B --> C[chunks.json]
+    C --> D[Embedding model and FAISS index]
+    C --> E[Chunk metadata JSON]
+    D --> F[Dense retrieval]
+    E --> G[BM25 retrieval]
+    F --> H[Weighted RRF]
+    G --> H
+    H --> I[BGE cross-encoder evidence scores]
+    I --> J{Evidence weak?}
+    J -- Yes --> K[Local query rewrite and terminology expansion]
+    K --> L[Corrective retrieval]
+    L --> M[Evidence selection]
+    J -- No --> M
+    M --> N[Local Llama answer generation]
+    N --> O[Streamlit answer and sources]
+```
 
 ### Workflow A: standard question answering
 
@@ -236,9 +256,11 @@ The reranker contributes to evidence assessment but does not replace the RRF ord
 
 When the initial evidence label is `weak`, the pipeline asks the local model to produce one concise retrieval query. It strips quote and newline characters, applies the first matching controlled phrase mapping (currently variations of “outside project/work” and “side gig” to “moonlighting”), and runs retrieval again. If the corrected retrieval has a higher evidence score, it becomes the selected result set. Otherwise, initial results are kept. The displayed `correction_used` field means the retry ran; it does not imply the retry replaced the initial results.
 
-> **Workflow screenshot placeholder:** Add a screenshot of the UI's corrected search query and source evidence here.
->
-> `![Correction workflow](docs/images/correction-workflow.png)`
+![Corrective retrieval: query and evidence](docs/images/corrective-retrieval-1.png)
+
+![Corrective retrieval: source details](docs/images/corrective-retrieval-2.png)
+
+![Corrective retrieval: answer and retrieval status](docs/images/corrective-retrieval-3.png)
 
 ### Workflow C: corpus refresh
 
